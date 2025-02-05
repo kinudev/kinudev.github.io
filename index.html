@@ -8,11 +8,13 @@
   <meta property="og:title" content="kinu.dev">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kinu.dev">
-  <meta property="og:description" content="Kinu LLC is a leading software company committed to developing innovative solutions for a better tomorrow.">
+  <meta property="og:description"
+    content="Kinu LLC is a leading software company committed to developing innovative solutions.">
   <meta property="og:image" content="/favicon-32x32.png">
 
   <meta itemprop="name" content="kinu.dev">
-  <meta itemprop="description" content="Kinu LLC is a leading software company committed to developing innovative solutions for a better tomorrow.">
+  <meta itemprop="description"
+    content="Kinu LLC is a leading software company committed to developing innovative solutions.">
   <meta itemprop="url" content="https://kinu.dev">
   <meta itemprop="thumbnailUrl" content="/favicon-32x32.png">
   <meta itemprop="image" content="/favicon-32x32.png">
@@ -26,77 +28,167 @@
   <link rel="icon" type="image/x-icon" href="/favicon-32x32.png">
 
   <style>
+    :root {
+      --primary-color: #2563eb;
+      --text-color: #1f2937;
+      --background-color: #ffffff;
+      --accent-color: #f3f4f6;
+    }
+
     html,
     body {
       max-width: 100%;
       margin: 0;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      line-height: 1.6;
     }
 
     h1 {
-      font-family: "Arvo";
+      font-family: "Arvo", serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      background: linear-gradient(120deg, #0891b2, #0284c7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-out forwards;
     }
 
     p {
-      font-family: "Roboto";
+      font-family: "Roboto", sans-serif;
+      font-size: 1.1rem;
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
     }
 
     main {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .content {
-      margin: 14px;
-      max-width: 680px;
+      max-width: 800px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
+      gap: 2.5rem;
+      background-color: var(--background-color);
+      padding: 2rem;
+      border-radius: 1rem;
     }
 
     .header {
       text-align: center;
     }
+
+    .section {
+      padding: 1.5rem;
+      background-color: var(--accent-color);
+      border-radius: 0.75rem;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: var(--accent-color);
+      border-radius: 0.75rem;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 0.8s ease-out forwards;
+    }
+
+    .contact p {
+      font-size: 1rem;
+      color: var(--text-color);
+      font-weight: 500;
+      margin: 0;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .content {
+        padding: 1rem;
+      }
+
+      .section {
+        padding: 1rem;
+      }
+    }
   </style>
 
-  <title>kinu.dev</title>
+  <title>kinu.dev - Innovative Software Solutions</title>
 </head>
 
 <body>
   <main>
     <div class="content">
       <div class="header">
-        <h1>Elevating Technology for a Better Tomorrow</h1>
+        <h1>Turning Complex Challenges into Elegant Solutions</h1>
       </div>
 
-      <div>
+      <div class="section">
         <p>
-          Kinu LLC is a leading software company committed to developing innovative solutions for a better tomorrow.
-          With a team of highly skilled engineers and developers, Kinu LLC offers a diverse range
-          of services, including custom software development, mobile app creation, web development, and software
-          consulting, all designed to meet the needs of our clients.
-        </p>
-        <br>
-        <p>
-          The company is dedicated to staying at the forefront of technology, constantly exploring new technologies and
-          approaches to deliver the highest quality solutions. Our aim is to empower clients by leveraging technology,
-          not just for business growth but also for societal progress.
-        </p>
-        <br>
-        <p>
-          Kinu LLC's mission is to help clients achieve their objectives while contributing to a better future for
-          everyone through impactful technological advancements.
+          Kinu LLC is a leading software company committed to developing innovative solutions.
+          With a team of highly skilled engineers and developers, we specialize in custom software development,
+          mobile applications, web development, and strategic consulting.
         </p>
       </div>
 
-      <div>
+      <div class="section">
+        <p>
+          We stay at the forefront of technology, constantly exploring new approaches to deliver exceptional solutions.
+          Our mission is to empower clients by leveraging cutting-edge technology, driving both business growth
+          and positive societal impact.
+        </p>
+      </div>
+
+      <div class="section">
+        <p>
+          At Kinu LLC, we're more than just developers – we're partners in your journey towards technological
+          excellence,
+          helping you achieve your objectives while contributing to a better future for everyone.
+        </p>
+      </div>
+
+      <div class="contact">
         <p>
           Contact: hello [at] kinu [dot] dev
         </p>
       </div>
     </div>
-
   </main>
 </body>
 
